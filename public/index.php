@@ -1,15 +1,19 @@
 <?php
 require '../vendor/core/Router.php';
 require '../vendor/libs/functions.php';
+//require '../app/controllers/Main.php';
+//require '../app/controllers/Posts.php';
+//require '../app/controllers/Page.php';
+//require '../app/controllers/PostsNew.php';
+spl_autoload_register(function (){
+    $file = '';
+});
 
 $query = $_SERVER['QUERY_STRING'];
 
-Router::add('post/add',['controller'=> 'Posts','action' => 'add']);
-Router::add('posts',['controller'=> 'Posts','action' => 'index']);
-Router::add('',['controller'=> 'Main','action' => 'index']);
 
-if (Router::matchRoute($query)){
-    debug(Router::getRoute());
-}else{
-    echo '404';
-}
+Router::add('^$',['controller'=> 'Main','action' => 'index']);
+Router::add('^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$');
+
+Router::dispatch($query);
+
