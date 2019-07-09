@@ -1,0 +1,12 @@
+{
+    "name": "alexandr.kopyl/php-new-fw",
+    "type": "project",
+    "license": "MSI",
+    "authors": [
+        {
+            "name": "Alexsander",
+            "email": "alexsander11115@gmail.com"
+        }
+    ],
+    "require": {}
+}
