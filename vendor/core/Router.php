@@ -54,14 +54,17 @@ class Router
         return false;
     }
     public static function dispatch($url){
+        $url = self::removeQueryString($url);
         if (self::matchRoute($url)){
 
             $controller = 'app\controllers\\'. self::$route['controller'];
             if (class_exists($controller)){
                 $cObj = new $controller(self::$route);
                 $action = self::lowerCamelCase(self::$route['action']) . "Action";
+
                 if (method_exists($cObj,$action)){
                     $cObj->$action();
+                    $cObj->getView();
                 }else{
                     echo "Контроллер <b>$controller::$action</b> не найден";
                 }
@@ -70,8 +73,7 @@ class Router
                 echo "Контроллер <b>$controller</b> не найден";
             }
         }else{
-            debug(['Hello']);
-//            http_response_code(404);
+            http_response_code(404);
             return include '404.html';
         }
     }
@@ -85,6 +87,18 @@ class Router
     //camelCase actions
     protected static function lowerCamelCase($name){
         return lcfirst(self::upperCamelCase($name));
+    }
+
+    protected static function removeQueryString($url){
+        if ($url){
+            $params = explode('&',$url);
+            if(false === strpos($params[0],'=')){
+                return rtrim($params[0],'/');
+            }else{
+                return '';
+            }
+        }
+        return $url;
     }
 
 }

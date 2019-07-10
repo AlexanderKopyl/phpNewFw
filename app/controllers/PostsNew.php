@@ -1,16 +1,18 @@
 <?php
 namespace app\controllers;
 
-class PostsNew
+class PostsNew extends App
 {
+
+
     public function indexAction()
     {
-        echo "PostsNew - ALL fine";
+
     }
 
     public function testAction()
     {
-        echo "PostsNew - ALL fine";
+
     }
 
 }

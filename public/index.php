@@ -11,6 +11,7 @@ define("WWW", __DIR__);
 define("CORE",dirname(__DIR__).'/vendor/core');
 define("ROOT",dirname(__DIR__));
 define("APP",dirname(__DIR__) . "/app");
+define("LAYOUT",'default');
 
 spl_autoload_register(function ($class){
     $file = ROOT . '/' . str_replace('\\','/', $class) . '.php';
@@ -22,7 +23,8 @@ spl_autoload_register(function ($class){
 $query = $_SERVER['QUERY_STRING'];
 
 
-Router::add('^pages/?(?P<action>[a-z-]+)?$',['controller'=> 'Posts']);
+Router::add('^page/(?P<action>[a-z-]+)/(?P<alias>[a-z-]+)$',['controller'=> 'Page']);
+Router::add('^page/(?P<alias>[a-z-]+)$',['controller'=> 'Page','action' => 'view']);
 
 //defaults route
 Router::add('^$',['controller'=> 'Main','action' => 'index']);
