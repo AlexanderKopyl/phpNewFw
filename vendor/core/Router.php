@@ -1,5 +1,6 @@
 <?php
 
+namespace vendor\core;
 
 class Router
 {
@@ -39,11 +40,13 @@ class Router
                         $route[$k] = $v;
                     }
                 }
+//
                 if (!isset($route['action'])){
                     $route['action'] = 'index';
                 }
 //                debug($route);
 
+                $route['controller'] = self::upperCamelCase($route['controller']);
                 self::$route = $route;
                 return true;
             }
@@ -52,10 +55,10 @@ class Router
     }
     public static function dispatch($url){
         if (self::matchRoute($url)){
-            $controller = self::upperCamelCase(self::$route['controller']);
 
+            $controller = 'app\controllers\\'. self::$route['controller'];
             if (class_exists($controller)){
-                $cObj = new $controller;
+                $cObj = new $controller(self::$route);
                 $action = self::lowerCamelCase(self::$route['action']) . "Action";
                 if (method_exists($cObj,$action)){
                     $cObj->$action();
@@ -67,7 +70,8 @@ class Router
                 echo "Контроллер <b>$controller</b> не найден";
             }
         }else{
-            http_response_code(404);
+            debug(['Hello']);
+//            http_response_code(404);
             return include '404.html';
         }
     }

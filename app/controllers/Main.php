@@ -1,9 +1,10 @@
 <?php
 
+namespace app\controllers;
 
 class Main
 {
-    public function index()
+    public function indexAction()
     {
         echo "Main - ALL fine";
     }
