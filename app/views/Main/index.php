@@ -1,1 +1,3 @@
-<h1>Main\Index</h1>
+<code><?=__FILE__?></code>
+<?=$name?>
+<?=$hi?>

@@ -11,5 +11,12 @@ class Main extends App
 //        $this->layout = false;
 //        $this->layout = 'main';
 //        $this->view = 'test';
+        $name = "Alexsander";
+        $hi = "Hello";
+        $title = "PAGE TITLE";
+
+        $data = compact('name','hi','title');
+
+        $this->set($data);
     }
 }
