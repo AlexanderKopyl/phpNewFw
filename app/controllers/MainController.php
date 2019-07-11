@@ -8,6 +8,7 @@ class MainController extends AppController
 {
     public $layout = 'main';
 
+
     public function indexAction()
     {
         $model = new Main;
@@ -15,8 +16,8 @@ class MainController extends AppController
         $posts = $model->findAll();
 
         $title = "PAGE TITLE";
-
-        $data = compact('title','posts');
+        $post = $model->findOne(120,'article_id');
+        $data = compact('title','posts','post');
 
         $this->set($data);
     }

@@ -1,4 +1,5 @@
 <div class="container">
+    <?= debug($post)?>
     <?php if (!empty($posts)) : ?>
         <?php foreach ($posts as $post) :?>
             <div class="panel panel-default">
@@ -10,6 +11,7 @@
 
         <?php endforeach;?>
     <?php endif;?>
+
 </div>
 
 
