@@ -1,18 +1,14 @@
 <?php
 namespace app\controllers;
 
-class PostsNew extends App
+class PostsController extends AppController
 {
-
-
     public function indexAction()
     {
 
     }
-
     public function testAction()
     {
 
     }
-
 }
