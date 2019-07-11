@@ -15,10 +15,20 @@
     <![endif]-->
 </head>
 <body>
+<div class="container">
+    <?php if (!empty($menu)) : ?>
+        <ul class="nav nav-pills">
+            <?php foreach ($menu as $v) :?>
+                <li role="presentation" ><a href="#"><?= $v['title']?></a></li>
+            <?php endforeach;?>
+        </ul>
+    <?php endif;?>
 
-<h1>Main, teamplate</h1>
+    <h1>Main, teamplate</h1>
 
-<?= $content ?>
+    <?= $content ?>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>

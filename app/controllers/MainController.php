@@ -12,12 +12,13 @@ class MainController extends AppController
     public function indexAction()
     {
         $model = new Main;
-//        $res = $model->query("CREATE TABLE posts SELECT * FROM operationebashu.oc_article_description;");
-        $posts = $model->findAll();
+        $posts = \R::findAll('posts');
+        $menu = \R::findAll('category');
+
 
         $title = "PAGE TITLE";
-        $post = $model->findOne(120,'article_id');
-        $data = compact('title','posts','post');
+//        $post = $model->findOne(120,'article_id');
+        $data = compact('title','posts','menu');
 
         $this->set($data);
     }

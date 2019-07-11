@@ -4500,7 +4500,7 @@ class NullCursor implements Cursor
 
 namespace RedBeanPHP {
 
-use RedBeanPHP\Cursor as Cursor;
+use RedBeanPHP\Cursor;
 use RedBeanPHP\Repository as Repository;
 
 /**
@@ -4529,7 +4529,7 @@ use RedBeanPHP\Repository as Repository;
 class BeanCollection
 {
 	/**
-	 * @var Cursor
+	 * @var \RedBeanPHP\Cursor
 	 */
 	protected $cursor = NULL;
 
@@ -4548,11 +4548,11 @@ class BeanCollection
 	 *
 	 * @param string     $type       type of beans in this collection
 	 * @param Repository $repository repository to use to generate bean objects
-	 * @param Cursor     $cursor     cursor object to use
+	 * @param \RedBeanPHP\Cursor $cursor     cursor object to use
 	 *
 	 * @return void
 	 */
-	public function __construct( $type, Repository $repository, Cursor $cursor )
+	public function __construct($type, Repository $repository, \RedBeanPHP\Cursor $cursor )
 	{
 		$this->type = $type;
 		$this->cursor = $cursor;
