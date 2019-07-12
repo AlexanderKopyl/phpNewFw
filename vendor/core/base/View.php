@@ -41,12 +41,14 @@ class View{
         }
 
         $file_view = APP . "/views/{$this->route['controller']}/{$this->view}.php";
+
         ob_start();
         if(is_file($file_view)){
             require  $file_view;
         }else{
             echo "<p>Не найден вид <b>$file_view</b></p>";
         }
+
         $content = ob_get_clean();
 
         if (false !== $this->layout){
