@@ -75,7 +75,8 @@ class Router
 
 
     /**
-     * Основная функция которая получает $url и обрабатывает.
+     * Основная функция которая получает $url и обрабатывает и
+     * перенапрявляет по коректному пути
      * @param $url
      * @return mixed
      */
@@ -115,12 +116,18 @@ class Router
 
     //CamelCase controllers
     protected static function upperCamelCase($name){
+        /**
+         * ucwords — Преобразует в верхний регистр первый символ каждого слова в строку
+         */
         return str_replace(" ","",ucwords(str_replace("-"," ", $name)));
 
     }
 
     //camelCase actions
     protected static function lowerCamelCase($name){
+        /**
+         *lcfirst — Преобразует первый символ строки в нижний регистр
+         */
         return lcfirst(self::upperCamelCase($name));
     }
 
@@ -130,8 +137,13 @@ class Router
      * @return string
      */
     protected static function removeQueryString($url){
+        /*
+         * strpos — Возвращает позицию первого вхождения подстроки
+         * explode — Разбивает строку с помощью разделителя
+         * rtrim — Удаляет пробелы (или другие символы) из конца строки
+         */
         if ($url){
-            $params = explode('&',$url);
+            $params = explode('&',$url,2);
             if(false === strpos($params[0],'=')){
                 return rtrim($params[0],'/');
             }else{
