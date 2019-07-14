@@ -14,6 +14,7 @@ class Router
     protected static $route = [];
 
     /**
+     * Добавляет маршруты
      * @param $regexp(регулярное выражение как ключь)
      * @param array $route(Текущий маршрут)
      */
@@ -73,17 +74,30 @@ class Router
     }
 
 
+    /**
+     * Основная функция которая получает $url и обрабатывает.
+     * @param $url
+     * @return mixed
+     */
     public static function dispatch($url){
         $url = self::removeQueryString($url);
+        //Если есть совпадение
         if (self::matchRoute($url)){
-
+            //Подключаем контроллер
+            //Подключение происходит по namespace
             $controller = 'app\controllers\\'. self::$route['controller'] . 'Controller';
-            if (class_exists($controller)){
-                $cObj = new $controller(self::$route);
-                $action = self::lowerCamelCase(self::$route['action']) . "Action";
 
+            //Проверяем еслить ли такой класс по namespace
+            if (class_exists($controller)){
+                //Если такой класс существует то создаем новый обьект и передаем параметр self::$route
+                $cObj = new $controller(self::$route);
+                //Action Класса
+                $action = self::lowerCamelCase(self::$route['action']) . "Action";
+                //Проверяем есть ли такой метод в классе
                 if (method_exists($cObj,$action)){
+                    //Если Action был найден то выполняем его
                     $cObj->$action();
+                    //Выводим нужный вид и передаем переменный в него
                     $cObj->getView();
                 }else{
                     echo "Контроллер <b>$controller::$action</b> не найден";
@@ -93,6 +107,7 @@ class Router
                 echo "Контроллер <b>$controller</b> не найден";
             }
         }else{
+            //Если ничего не найдено выводим ошибку 404
             http_response_code(404);
             return include '404.html';
         }
@@ -109,6 +124,11 @@ class Router
         return lcfirst(self::upperCamelCase($name));
     }
 
+    /**
+     * Функция разрешающая использовать $_GET параметры
+     * @param $url
+     * @return string
+     */
     protected static function removeQueryString($url){
         if ($url){
             $params = explode('&',$url);
