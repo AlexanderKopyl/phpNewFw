@@ -14,12 +14,10 @@ class MainController extends AppController
         $model = new Main;
         $posts = \R::findAll('posts');
         $menu = $this->menu;
-
-
         $this->setMeta('View page','Desc page');
+
         $meta = $this->meta;
-//        $post = $model->findOne(120,'article_id');
-        $data = compact('meta','menu');
+        $data = compact('meta','menu','posts');
 
         $this->set($data);
     }

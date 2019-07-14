@@ -5,8 +5,6 @@ use vendor\core\Router;
 
 require '../vendor/libs/functions.php';
 
-
-
 define("WWW", __DIR__);
 define("CORE",dirname(__DIR__).'/vendor/core');
 define("LIBS",dirname(__DIR__).'/vendor/libs');
@@ -21,6 +19,9 @@ spl_autoload_register(function ($class){
     }
 });
 
+/**
+ * Переменная текущего запроса..
+ */
 $query = $_SERVER['QUERY_STRING'];
 
 
@@ -30,6 +31,9 @@ Router::add('^page/(?P<alias>[a-z-]+)$',['controller'=> 'Page','action' => 'view
 //defaults route
 Router::add('^$',['controller'=> 'Main','action' => 'index']);
 Router::add('^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$');
-
+/**
+ * Вызов основной функций роутера..
+ * @param string
+ */
 Router::dispatch($query);
 

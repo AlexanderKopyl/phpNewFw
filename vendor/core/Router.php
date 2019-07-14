@@ -4,27 +4,45 @@ namespace vendor\core;
 
 class Router
 {
-
+    /**
+     * @var array
+     */
     protected static $routes = [];
+    /**
+     * @var array
+     */
     protected static $route = [];
 
+    /**
+     * @param $regexp(регулярное выражение как ключь)
+     * @param array $route(Текущий маршрут)
+     */
     public static function add($regexp, $route = [])
     {
 
         self::$routes[$regexp] = $route;
     }
 
+    /**
+     * Все маршруты на сайте.
+     * @return array
+     */
     public static function getRoutes()
     {
         return self::$routes;
     }
 
+    /**
+     * Текущий маршрут
+     * @return array
+     */
     public static function getRoute()
     {
         return self::$route;
     }
 
     /**
+     * Функция перебирает маршруты и ищет совпадения
      * @param $url
      * @return bool
      */
@@ -53,6 +71,8 @@ class Router
         }
         return false;
     }
+
+
     public static function dispatch($url){
         $url = self::removeQueryString($url);
         if (self::matchRoute($url)){
