@@ -34,11 +34,18 @@ abstract class Controller
         $this->view = $route['action'];
     }
 
+    /**
+     * Функция добавления класса View и рендер шаблога и переменных на страницу
+     */
     public function getView(){
         $vObj = new View($this->route,$this->layout,$this->view);
         $vObj->render($this->vars);
     }
 
+    /**
+     * Устанавливает переменные которые нужно передать в класс View
+     * @param $vars
+     */
     public function set($vars){
         $this->vars = $vars;
     }

@@ -34,6 +34,10 @@ class View{
         $this->view = $view;
     }
 
+    /**
+     * Рендеринг переменных для layout
+     * @param $vars
+     */
     public function render($vars){
 
         if(is_array($vars)){
