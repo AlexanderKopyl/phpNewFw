@@ -43,11 +43,11 @@ class Registry
         }
     }
 
-//    public function getList(){
-//        echo '<pre>';
-//        var_dump(self::$objects);
-//        echo '</pre>';
-//    }
+    public function getList(){
+        echo '<pre>';
+        var_dump(self::$objects);
+        echo '</pre>';
+    }
 
 
 }

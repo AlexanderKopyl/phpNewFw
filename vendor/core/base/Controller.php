@@ -44,9 +44,6 @@ abstract class Controller
     public function set($vars){
         $this->vars = $vars;
     }
-    public function getRegistry(){
-        $registry = Registry::instance();
-        return $registry;
-    }
+
 
 }

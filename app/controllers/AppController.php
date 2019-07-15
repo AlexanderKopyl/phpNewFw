@@ -15,7 +15,6 @@ class AppController extends \vendor\core\base\Controller
     {
         parent::__construct($route);
         new \app\models\Main;
-        $this->registry = $this->getRegistry();
         $this->menu = \R::findAll('category');
     }
 
