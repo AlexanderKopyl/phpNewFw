@@ -3,6 +3,7 @@
 
 namespace vendor\core\base;
 
+use vendor\core\Registry;
 
 abstract class Controller
 {
@@ -29,6 +30,7 @@ abstract class Controller
 
 
 
+
     public function __construct($route){
         $this->route = $route;
         $this->view = $route['action'];
@@ -42,4 +44,9 @@ abstract class Controller
     public function set($vars){
         $this->vars = $vars;
     }
+    public function getRegistry(){
+        $registry = Registry::instance();
+        return $registry;
+    }
+
 }

@@ -15,7 +15,8 @@ class MainController extends AppController
         $posts = \R::findAll('posts');
         $menu = $this->menu;
         $this->setMeta('View page','Desc page');
-
+//        $this->registry->getList();
+        $this->registry->cache->to();
         $meta = $this->meta;
         $data = compact('meta','menu','posts');
 
@@ -23,11 +24,11 @@ class MainController extends AppController
     }
 
     public function testAction(){
+
         $this->layout = 'test';
         $this->setMeta('test page','Desc page');
         $meta = $this->meta;
         $menu = $this->menu;
-//        $post = $model->findOne(120,'article_id');
         $data = compact('meta','menu');
 
         $this->set($data);

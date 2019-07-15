@@ -1857,7 +1857,7 @@
 
   var classCallCheck = function (instance, Constructor) {
     if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
+      throw new TypeError("Cannot call a classes as a function");
     }
   };
 
@@ -3930,7 +3930,7 @@
   var Popper = function () {
     /**
      * Creates a new Popper.js instance.
-     * @class Popper
+     * @classes Popper
      * @param {HTMLElement|referenceObject} reference - The reference element used to position the popper
      * @param {HTMLElement} popper - The HTML element used as the popper
      * @param {Object} options - Your custom options to override the ones defined in [Defaults](#defaults)
@@ -4002,8 +4002,8 @@
       this.state.eventsEnabled = eventsEnabled;
     }
 
-    // We can't use class properties because they don't get listed in the
-    // class prototype and break stuff like Sinon stubs
+    // We can't use classes properties because they don't get listed in the
+    // classes prototype and break stuff like Sinon stubs
 
 
     createClass(Popper, [{
@@ -5198,7 +5198,7 @@
   var ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i;
   var DefaultWhitelist = {
     // Global attributes allowed on any supplied element below.
-    '*': ['class', 'dir', 'id', 'lang', 'role', ARIA_ATTRIBUTE_PATTERN],
+    '*': ['classes', 'dir', 'id', 'lang', 'role', ARIA_ATTRIBUTE_PATTERN],
     a: ['target', 'href', 'title', 'rel'],
     area: [],
     b: [],
@@ -5349,7 +5349,7 @@
   };
   var Default$4 = {
     animation: true,
-    template: '<div class="tooltip" role="tooltip">' + '<div class="arrow"></div>' + '<div class="tooltip-inner"></div></div>',
+    template: '<div classes="tooltip" role="tooltip">' + '<div classes="arrow"></div>' + '<div classes="tooltip-inner"></div></div>',
     trigger: 'hover focus',
     title: '',
     delay: 0,
@@ -5915,7 +5915,7 @@
 
     _proto._cleanTipClass = function _cleanTipClass() {
       var $tip = $(this.getTipElement());
-      var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX);
+      var tabClass = $tip.attr('classes').match(BSCLS_PREFIX_REGEX);
 
       if (tabClass !== null && tabClass.length) {
         $tip.removeClass(tabClass.join(''));
@@ -6044,7 +6044,7 @@
     placement: 'right',
     trigger: 'click',
     content: '',
-    template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
+    template: '<div classes="popover" role="tooltip">' + '<div classes="arrow"></div>' + '<h3 classes="popover-header"></h3>' + '<div classes="popover-body"></div></div>'
   });
 
   var DefaultType$5 = _objectSpread({}, Tooltip.DefaultType, {
@@ -6125,7 +6125,7 @@
 
     _proto._cleanTipClass = function _cleanTipClass() {
       var $tip = $(this.getTipElement());
-      var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX$1);
+      var tabClass = $tip.attr('classes').match(BSCLS_PREFIX_REGEX$1);
 
       if (tabClass !== null && tabClass.length > 0) {
         $tip.removeClass(tabClass.join(''));
