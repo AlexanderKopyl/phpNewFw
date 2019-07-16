@@ -13,6 +13,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 <body>
 <div class="container">
@@ -29,7 +30,13 @@
     <?= $content ?>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
+<?php foreach ($scripts as $script) :?>
+    <?=$script?>
+<?php endforeach;?>
 </body>
 </html>

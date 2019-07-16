@@ -7,7 +7,6 @@ use app\models\Main;
 
 class PageController extends AppController {
 
-//    public $layout;
 
     public function viewAction(){
         $this->layout = 'view';
