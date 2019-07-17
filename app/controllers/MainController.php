@@ -35,13 +35,6 @@ class MainController extends AppController
             die;
         }
         echo 222;
-//        $this->layout = 'test';
-//        $this->setMeta('test page','Desc page');
-//        $meta = $this->meta;
-//        $menu = $this->menu;
-//        $data = compact('meta','menu');
-//
-//        $this->set($data);
     }
 
 
