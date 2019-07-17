@@ -30,6 +30,17 @@ class View{
      */
     public $scripts = [];
 
+    /**
+     *
+     */
+    public static $meta = ['title' => '', 'desc' => ''];
+    /**
+     * View constructor.
+     * @param $route
+     * @param string $layout
+     * @param string $view
+     */
+
     public function __construct($route,$layout='',$view = ''){
         $this->route = $route;
         if($layout === false){
@@ -89,6 +100,24 @@ class View{
         }
 
         return $content;
+    }
+
+    /**
+     *
+     */
+    public static function getMeta(){
+        echo '<title>'. self::$meta['title'] . '</title>
+        <meta name="description" content="'. self::$meta['desc'].'">
+    ';
+    }
+
+    /**
+     * @param string $title
+     * @param string $desc
+     */
+    public static function setMeta($title = '',$desc = ''){
+        self::$meta['title'] = $title;
+        self::$meta['desc'] = $desc;
     }
 
 }
