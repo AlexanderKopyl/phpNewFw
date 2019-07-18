@@ -1,16 +1,17 @@
 <?php
-//error_reporting(-1);
 
 use vendor\core\Router;
 
 require '../vendor/libs/functions.php';
 
+define("DEBUG",1);
 define("WWW", __DIR__);
 define("CORE",dirname(__DIR__).'/vendor/core');
 define("LIBS",dirname(__DIR__).'/vendor/libs');
 define("ROOT",dirname(__DIR__));
 define("APP",dirname(__DIR__) . "/app");
 define("CACHE",dirname(__DIR__) . "/tmp/cache");
+define("LOG",dirname(__DIR__) . "/tmp/log");
 define("LAYOUT",'default');
 
 /**

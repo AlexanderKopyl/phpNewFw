@@ -1,0 +1,16 @@
+[2019-07-18 16:42:03] Текст ошибки: syntax error, unexpected '$posts' (T_VARIABLE) Файл: W:\domains\phpNewFw\app\controllers\MainController.php Cтрока: 17 
+=====================
+[2019-07-18 16:42:25] Текст ошибки: Undefined property: app\controllers\MainController::$scripts Файл: W:\domains\phpNewFw\app\controllers\MainController.php Cтрока: 24 
+=====================
+[2019-07-18 16:43:40] Текст ошибки: Undefined property: app\controllers\MainController::$scripts Файл: W:\domains\phpNewFw\app\controllers\MainController.php Cтрока: 24 
+=====================
+[2019-07-18 16:48:11] Текст ошибки: Undefined property: app\controllers\MainController::$scripts Файл: W:\domains\phpNewFw\app\controllers\MainController.php Cтрока: 24 
+=====================
+[2019-07-18 16:57:34] Текст ошибки: Контроллер <b>app\controllers\TestController</b> не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 110 
+=====================
+[2019-07-18 16:57:57] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 116 
+=====================
+[2019-07-18 17:00:20] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 116 
+=====================
+[2019-07-18 17:00:34] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 116 
+=====================

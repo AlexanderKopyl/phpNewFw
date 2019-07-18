@@ -15,13 +15,8 @@ class MainController extends AppController
     {
         $model = new Main;
         $posts = \R::findAll('posts');
-//        $posts = App::$app->cache->get('posts');
-//        if (!$posts){
-//            $posts = \R::findAll('posts');
-//            App::$app->cache->set('posts',$posts);
-//        }
+
         $menu = $this->menu;
-        $scripts = $this->scripts;
         View::setMeta('View page','Desc page');
         $data = compact('menu','posts');
 
