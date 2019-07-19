@@ -18,8 +18,8 @@ class Db{
         $db = require ROOT . "/config/config_db.php";
         require LIBS . "/rb.php";
         \R::setup( $db['dsn'],$db['user'],$db['pass']);
-        \R::freeze(true);
-//        \R::fancyDebug( true);
+//        \R::freeze(true);
+        \R::fancyDebug( true);
 
     }
 

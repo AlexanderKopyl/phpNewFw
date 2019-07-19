@@ -18,3 +18,9 @@
 =====================
 [2019-07-19 13:41:42] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 116 
 =====================
+[2019-07-19 17:24:28] Текст ошибки: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'fw.category' doesn't exist Файл: W:\domains\phpNewFw\vendor\libs\rb.php Cтрока: 774 
+=====================
+[2019-07-19 17:28:35] Текст ошибки: Call to undefined function vendor\widgets\menu\Menu() Файл: W:\domains\phpNewFw\app\views\Main\index.php Cтрока: 3 
+=====================
+[2019-07-19 17:29:46] Текст ошибки: Call to undefined function vendor\widgets\menu\Menu() Файл: W:\domains\phpNewFw\app\views\Main\index.php Cтрока: 3 
+=====================

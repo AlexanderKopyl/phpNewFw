@@ -15,7 +15,7 @@ class AppController extends \vendor\core\base\Controller
     {
         parent::__construct($route);
         new \app\models\Main;
-        $this->menu = \R::findAll('category');
+        $this->menu = \R::findAll('categories');
     }
 
     protected function setMeta($title ='',$desc = ''){
