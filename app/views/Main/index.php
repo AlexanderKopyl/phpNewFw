@@ -1,5 +1,5 @@
 <div class="container">
-
+    <div id="answer"></div>
     <?php if (!empty($posts)) : ?>
         <?php foreach ($posts as $post) :?>
             <div class="panel panel-default">
@@ -21,7 +21,10 @@
             type:'post',
             data:{'id':e.target.value},
             success:function (res) {
-                console.log(res)
+                // var data = JSON.parse(res);
+                // $('#answer').html('<p>Title:'+ data.name + '| Description: ' + data.description + '</p>');
+                $('#answer').html(res);
+                // console.log(data)
             },
             error: function () {
                 alert("ERROR")
