@@ -52,8 +52,13 @@ class View{
     }
 
     /**
+<<<<<<< HEAD
+     * Рендеринг переменных для layout
+     * @param $vars
+=======
      * @param $vars
      *
+>>>>>>> e2cea9e27aba6b9e78ffd5df56cdd8934c6716d5
      */
     public function render($vars){
 
