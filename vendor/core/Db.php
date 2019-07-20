@@ -19,7 +19,7 @@ class Db{
         require LIBS . "/rb.php";
         \R::setup( $db['dsn'],$db['user'],$db['pass']);
 //        \R::freeze(true);
-        \R::fancyDebug( true);
+//        \R::fancyDebug( true);
 
     }
 

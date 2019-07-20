@@ -69,6 +69,9 @@ class ErrorHandler
         error_log("[".date('Y-m-d H:i:s')."] Текст ошибки: {$message} Файл: {$file } Cтрока: {$line} \n=====================\n",3,LOG . '/errors.log');
     }
 
+    /**
+     * @param Exception $e
+     */
     public function exceptionHandler(Exception $e){
         $this->logErrors($e->getMessage(),$e->getFile(),$e->getLine());
 

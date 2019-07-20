@@ -51,6 +51,10 @@ class View{
         $this->view = $view;
     }
 
+    /**
+     * @param $vars
+     *
+     */
     public function render($vars){
 
         if(is_array($vars)){
@@ -103,7 +107,8 @@ class View{
     }
 
     /**
-     *
+     * Функция возвращает мета теги страницы
+     *return html
      */
     public static function getMeta(){
         echo '<title>'. self::$meta['title'] . '</title>
@@ -112,6 +117,7 @@ class View{
     }
 
     /**
+     * Устанавливает мета теги страницы
      * @param string $title
      * @param string $desc
      */

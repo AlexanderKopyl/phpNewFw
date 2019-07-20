@@ -4,6 +4,8 @@
 namespace vendor\widgets\menu;
 
 
+use vendor\libs\Cache;
+
 class Menu
 {
     /**
@@ -30,35 +32,67 @@ class Menu
     /**
      * @var string
      */
-    protected $container;
+    protected $container = 'ul';
     /**
      * @var string
      */
-    protected $table;
+    protected $class = 'menu';
     /**
      * @var string
      */
-    protected $cache;
+    protected $table = 'categories';
+    /**
+     * @var number
+     */
+    protected $cache = 3600;
+    /**
+     * @var number
+     */
+    protected $cacheKey = 'fw_menu';
 
 
-    public function __construct()
+    public function __construct($options = [])
     {
+       $this->tpl = __DIR__ . '/menu_tpl/menu.php';
+       $this->getOptions($options);
        $this->run();
     }
 
-    public function run(){
-        $this->data = \R::getAssoc("SELECT * FROM categories");
-        $this->tree = $this->getTree();
-        debug($this->tree);
+    public function getOptions($options){
+        foreach ($options as $option => $value) {
+            if(property_exists($this,$option)){
+                $this->$option = $value;
+            }
+        }
+    }
+    protected function output(){
+        echo "<{$this->container} class='{$this->class}'>";
+            echo  $this->menuHtml;
+        echo "</{$this->container}>";
+    }
+    public function run()
+    {
+        $cache = new Cache();
+        $this->menuHtml = $cache->get($this->cacheKey);
+        if(!$this->menuHtml){
+            $this->data = \R::getAssoc("SELECT * FROM {$this->table}");
+            $this->tree = $this->getTree();
+//        debug($this->tree);
+            $this->menuHtml = $this->getMenuHtml($this->tree);
+            $cache->set($this->cacheKey,$this->menuHtml,$this->cache);
+        }
+
+        $this->output();
     }
 
-    protected function getTree(){
+    protected function getTree()
+    {
         $tree = [];
         $data = $this->data;
-        foreach ($data as $id=>&$node) {
-            if (!$node['parent']){
+        foreach ($data as $id => &$node) {
+            if (!$node['parent']) {
                 $tree[$id] = &$node;
-            }else{
+            } else {
                 $data[$node['parent']]['childs'][$id] = &$node;
             }
         }
@@ -66,12 +100,20 @@ class Menu
         return $tree;
     }
 
-    protected function getMenuHtml($tree,$tab = ''){
-
+    protected function getMenuHtml($tree, $tab = '')
+    {
+        $str = '';
+        foreach ($tree as $id => $category) {
+            $str .= $this->catToTemplate($category, $tab, $id);
+        }
+        return $str;
     }
 
-    protected function catToTemplate($category,$tab,$id){
-
+    protected function catToTemplate($category, $tab, $id)
+    {
+        ob_start();
+        require $this->tpl;
+        return ob_get_clean();
     }
 
 }

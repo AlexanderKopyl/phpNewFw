@@ -29,11 +29,15 @@ abstract class Controller
     public $vars;
 
 
-
+    /**
+     * Controller constructor.
+     * @param $route
+     */
     public function __construct($route){
         $this->route = $route;
         $this->view = $route['action'];
     }
+
 
     public function getView(){
         $vObj = new View($this->route,$this->layout,$this->view);
@@ -44,10 +48,19 @@ abstract class Controller
         $this->vars = $vars;
     }
 
+    /**
+     * Проверяет был ли запрос вызван методом Adjax
+     * @return bool
+     */
     public function isAjax(){
         return isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] === 'XMLHttpRequest';
     }
 
+    /**
+     * Подключает View странице
+     * @param $view
+     * @param array $vars
+     */
     public function loadView($view,$vars = []){
         extract($vars);
         require APP . "/views/{$this->route['controller']}/{$view}.php";

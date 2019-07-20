@@ -24,3 +24,5 @@
 =====================
 [2019-07-19 17:29:46] Текст ошибки: Call to undefined function vendor\widgets\menu\Menu() Файл: W:\domains\phpNewFw\app\views\Main\index.php Cтрока: 3 
 =====================
+[2019-07-20 12:24:41] Текст ошибки: require(D:\laragon\www\phpNewFw\public/menu/select.php): failed to open stream: No such file or directory Файл: D:\laragon\www\phpNewFw\vendor\widgets\menu\Menu.php Cтрока: 103 
+=====================
