@@ -1,0 +1,9 @@
+[2019-07-18 13:45:25] Текст ошибки: Undefined variable: test Файл: W:\domains\phpNewFw\public\test\error\index.php 
+        Строка: 71 
+=====================
+[2019-07-18 13:45:53] Текст ошибки: Undefined variable: test Файл: W:\domains\phpNewFw\public\test\error\index.php Cтрока: 70 
+=====================
+[2019-07-18 13:55:51] Текст ошибки: Call to undefined function test() Файл: W:\domains\phpNewFw\public\test\error\index.php Cтрока: 76 
+=====================
+[2019-07-18 13:56:25] Текст ошибки: Упс исключение Файл: W:\domains\phpNewFw\public\test\error\index.php Cтрока: 85 
+=====================

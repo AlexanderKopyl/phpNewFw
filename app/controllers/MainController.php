@@ -3,6 +3,8 @@
 namespace app\controllers;
 
 use app\models\Main;
+use vendor\core\App;
+use vendor\core\base\View;
 
 class MainController extends AppController
 {
@@ -13,24 +15,23 @@ class MainController extends AppController
     {
         $model = new Main;
         $posts = \R::findAll('posts');
-        $menu = $this->menu;
-        $this->setMeta('View page','Desc page');
 
-        $meta = $this->meta;
-        $data = compact('meta','menu','posts');
+        $menu = $this->menu;
+        View::setMeta('View page','Desc page');
+        $data = compact('menu','posts');
 
         $this->set($data);
     }
 
     public function testAction(){
-        $this->layout = 'test';
-        $this->setMeta('test page','Desc page');
-        $meta = $this->meta;
-        $menu = $this->menu;
-//        $post = $model->findOne(120,'article_id');
-        $data = compact('meta','menu');
-
-        $this->set($data);
+        if($this->isAjax()){
+            $post = \R::findOne('posts','id='.$_POST['id']);
+            $this->loadView('_test',compact('post'));
+            die;
+        }
+        echo 222;
     }
+
+
 
 }

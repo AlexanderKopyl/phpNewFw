@@ -1,0 +1,28 @@
+[2019-07-18 16:42:03] Текст ошибки: syntax error, unexpected '$posts' (T_VARIABLE) Файл: W:\domains\phpNewFw\app\controllers\MainController.php Cтрока: 17 
+=====================
+[2019-07-18 16:42:25] Текст ошибки: Undefined property: app\controllers\MainController::$scripts Файл: W:\domains\phpNewFw\app\controllers\MainController.php Cтрока: 24 
+=====================
+[2019-07-18 16:43:40] Текст ошибки: Undefined property: app\controllers\MainController::$scripts Файл: W:\domains\phpNewFw\app\controllers\MainController.php Cтрока: 24 
+=====================
+[2019-07-18 16:48:11] Текст ошибки: Undefined property: app\controllers\MainController::$scripts Файл: W:\domains\phpNewFw\app\controllers\MainController.php Cтрока: 24 
+=====================
+[2019-07-18 16:57:34] Текст ошибки: Контроллер <b>app\controllers\TestController</b> не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 110 
+=====================
+[2019-07-18 16:57:57] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 116 
+=====================
+[2019-07-18 17:00:20] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 116 
+=====================
+[2019-07-18 17:00:34] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 116 
+=====================
+[2019-07-19 13:41:42] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 116 
+=====================
+[2019-07-19 13:41:42] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 116 
+=====================
+[2019-07-19 17:24:28] Текст ошибки: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'fw.category' doesn't exist Файл: W:\domains\phpNewFw\vendor\libs\rb.php Cтрока: 774 
+=====================
+[2019-07-19 17:28:35] Текст ошибки: Call to undefined function vendor\widgets\menu\Menu() Файл: W:\domains\phpNewFw\app\views\Main\index.php Cтрока: 3 
+=====================
+[2019-07-19 17:29:46] Текст ошибки: Call to undefined function vendor\widgets\menu\Menu() Файл: W:\domains\phpNewFw\app\views\Main\index.php Cтрока: 3 
+=====================
+[2019-07-20 12:24:41] Текст ошибки: require(D:\laragon\www\phpNewFw\public/menu/select.php): failed to open stream: No such file or directory Файл: D:\laragon\www\phpNewFw\vendor\widgets\menu\Menu.php Cтрока: 103 
+=====================

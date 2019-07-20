@@ -22,7 +22,7 @@ interface Logger
 	 * A logger (for PDO or OCI driver) needs to implement the log method.
 	 * The log method will receive logging data. Note that the number of parameters is 0, this means
 	 * all parameters are optional and the number may vary. This way the logger can be used in a very
-	 * flexible way. Sometimes the logger is used to log a simple error message and in other
+	 * flexible way. Sometimes the logger is used to log a simple errors message and in other
 	 * situations sql and bindings are passed.
 	 * The log method should be able to accept all kinds of parameters and data by using
 	 * functions like func_num_args/func_get_args.
@@ -770,7 +770,7 @@ class RPDO implements Driver
 			//Unfortunately the code field is supposed to be int by default (php)
 			//So we need a property to convey the SQL State code.
 			$err = $e->getMessage();
-			if ( $this->loggingEnabled && $this->logger ) $this->logger->log( 'An error occurred: ' . $err );
+			if ( $this->loggingEnabled && $this->logger ) $this->logger->log( 'An errors occurred: ' . $err );
 			$exception = new SQL( $err, 0, $e );
 			$exception->setSQLState( $e->getCode() );
 			$exception->setDriverDetails( $e->errorInfo );
@@ -1468,7 +1468,7 @@ if (interface_exists('\JsonSerializable')) { interface Jsonable extends \JsonSer
 class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 {
 	/**
-	 * FUSE error modes.
+	 * FUSE errors modes.
 	 */
 	const C_ERR_IGNORE    = FALSE;
 	const C_ERR_LOG       = 1;
@@ -1588,7 +1588,7 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	 }
 
 	/**
-	 * Sets the error mode for FUSE.
+	 * Sets the errors mode for FUSE.
 	 * What to do if a FUSE model method does not exist?
 	 * You can set the following options:
 	 *
@@ -1610,7 +1610,7 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	 *
 	 * This method returns the old mode and handler as an array.
 	 *
-	 * @param integer       $mode error handling mode
+	 * @param integer       $mode errors handling mode
 	 * @param callable|NULL $func custom handler
 	 *
 	 * @return array
@@ -1624,10 +1624,10 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 			&& $mode !== self::C_ERR_EXCEPTION
 			&& $mode !== self::C_ERR_FUNC
 			&& $mode !== self::C_ERR_FATAL
-		) throw new \Exception( 'Invalid error mode selected' );
+		) throw new \Exception( 'Invalid errors mode selected' );
 
 		if ( $mode === self::C_ERR_FUNC && !is_callable( $func ) ) {
-			throw new \Exception( 'Invalid error handler' );
+			throw new \Exception( 'Invalid errors handler' );
 		}
 
 		$old = array( self::$errorHandlingFUSE, self::$errorHandler );
@@ -1802,7 +1802,7 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	 * The example illustrates usage through these accessors.
 	 *
 	 * @param string  $type    the name of the list you want to retrieve
-	 * @param OODB    $redbean instance of the RedBeanPHP OODB class
+	 * @param OODB    $redbean instance of the RedBeanPHP OODB classes
 	 * @param ToolBox $toolbox instance of ToolBox (to get access to core objects)
 	 *
 	 * @return array
@@ -1921,7 +1921,7 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	 * Here you can change the Bean Helper. The Bean Helper is an object
 	 * providing access to a toolbox for the bean necessary to retrieve
 	 * nested beans (bean lists: ownBean, sharedBean) without the need to
-	 * rely on static calls to the facade (or make this class dep. on OODB).
+	 * rely on static calls to the facade (or make this classes dep. on OODB).
 	 *
 	 * @param BeanHelper $helper helper to use for this bean
 	 *
@@ -2477,7 +2477,7 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 
 	/**
 	 * Magic Getter. Gets the value for a specific property in the bean.
-	 * If the property does not exist this getter will make sure no error
+	 * If the property does not exist this getter will make sure no errors
 	 * occurs. This is because RedBean allows you to query (probe) for
 	 * properties. If the property can not be found this method will
 	 * return NULL instead.
@@ -2819,7 +2819,7 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	/**
 	 * Sends the call to the registered model.
 	 * This method can also be used to override bean behaviour.
-	 * In that case you don't want an error or exception to be triggered
+	 * In that case you don't want an errors or exception to be triggered
 	 * if the method does not exist in the model (because it's optional).
 	 * Unfortunately we cannot add an extra argument to __call() for this
 	 * because the signature is fixed. Another option would be to set
@@ -2827,7 +2827,7 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	 * cause additional complexity because we have to deal with extra temporary state.
 	 * So, instead I allowed the method name to be prefixed with '@', in practice
 	 * nobody creates methods like that - however the '@' symbol in PHP is widely known
-	 * to suppress error handling, so we can reuse the semantics of this symbol.
+	 * to suppress errors handling, so we can reuse the semantics of this symbol.
 	 * If a method name gets passed starting with '@' the overrideDontFail variable
 	 * will be set to TRUE and the '@' will be stripped from the function name before
 	 * attempting to invoke the method on the model. This way, we have all the
@@ -3743,7 +3743,7 @@ use RedBeanPHP\Observer as Observer;
 
 /**
  * Observable
- * Base class for Observables
+ * Base classes for Observables
  *
  * @file            RedBeanPHP/Observable.php
  * @author          Gabor de Mooij and the RedBeanPHP community
@@ -4058,8 +4058,8 @@ use RedBeanPHP\Driver as Driver;
 /**
  * DBAdapter (Database Adapter)
  *
- * An adapter class to connect various database systems to RedBean
- * Database Adapter Class. The task of the database adapter class is to
+ * An adapter classes to connect various database systems to RedBean
+ * Database Adapter Class. The task of the database adapter classes is to
  * communicate with the database driver. You can use all sorts of database
  * drivers with RedBeanPHP. The default database drivers that ships with
  * the RedBeanPHP library is the RPDO driver ( which uses the PHP Data Objects
@@ -4090,7 +4090,7 @@ class DBAdapter extends Observable implements Adapter
 	 * Constructor.
 	 *
 	 * Creates an instance of the RedBean Adapter Class.
-	 * This class provides an interface for RedBean to work
+	 * This classes provides an interface for RedBean to work
 	 * with ADO compatible DB instances.
 	 *
 	 * Usage:
@@ -4385,7 +4385,7 @@ use RedBeanPHP\Cursor as Cursor;
  * Implementation of PDO Database Cursor.
  * Used by the BeanCollection to fetch one bean at a time.
  * The PDO Cursor is used by Query Writers to support retrieval
- * of large bean collections. For instance, this class is used to
+ * of large bean collections. For instance, this classes is used to
  * implement the findCollection()/BeanCollection functionality.
  *
  * @file    RedBeanPHP/Cursor/PDOCursor.php
@@ -5001,7 +5001,7 @@ interface QueryWriter
 	 * This method will check whether the SQL state is in the list of specified states
 	 * and returns TRUE if it does appear in this list or FALSE if it
 	 * does not. The purpose of this method is to translate the database specific state to
-	 * a one of the constants defined in this class and then check whether it is in the list
+	 * a one of the constants defined in this classes and then check whether it is in the list
 	 * of standard states provided.
 	 *
 	 * @param string $state SQL state to consider
@@ -6552,7 +6552,7 @@ use RedBeanPHP\RedException\SQL as SQLException;
 
 /**
  * RedBeanPHP MySQLWriter.
- * This is a QueryWriter class for RedBeanPHP.
+ * This is a QueryWriter classes for RedBeanPHP.
  * This QueryWriter provides support for the MySQL/MariaDB database platform.
  *
  * @file    RedBeanPHP/QueryWriter/MySQL.php
@@ -6968,7 +6968,7 @@ use RedBeanPHP\RedException\SQL as SQLException;
 
 /**
  * RedBeanPHP SQLiteWriter with support for SQLite types
- * This is a QueryWriter class for RedBeanPHP.
+ * This is a QueryWriter classes for RedBeanPHP.
  * This QueryWriter provides support for the SQLite database platform.
  *
  * @file    RedBeanPHP/QueryWriter/SQLiteT.php
@@ -7435,7 +7435,7 @@ use RedBeanPHP\RedException\SQL as SQLException;
 
 /**
  * RedBeanPHP PostgreSQL Query Writer.
- * This is a QueryWriter class for RedBeanPHP.
+ * This is a QueryWriter classes for RedBeanPHP.
  * This QueryWriter provides support for the PostgreSQL database platform.
  *
  * @file    RedBeanPHP/QueryWriter/PostgreSQL.php
@@ -7854,7 +7854,7 @@ use RedBeanPHP\RedException\SQL as SQLException;
 
 /**
  * RedBeanPHP CUBRID Writer.
- * This is a QueryWriter class for RedBeanPHP.
+ * This is a QueryWriter classes for RedBeanPHP.
  * This QueryWriter provides support for the CUBRID database platform.
  *
  * @file    RedBeanPHP/QueryWriter/CUBRID.php
@@ -8230,7 +8230,7 @@ namespace RedBeanPHP {
 
 /**
  * RedBean\Exception Base.
- * Represents the base class for RedBeanPHP\Exceptions.
+ * Represents the base classes for RedBeanPHP\Exceptions.
  *
  * @file    RedBeanPHP/Exception.php
  * @author  Gabor de Mooij and the RedBeanPHP Community
@@ -8303,9 +8303,9 @@ class SQL extends RedException
 
 	/**
 	 * Returns the raw SQL STATE, possibly compliant with
-	 * ANSI SQL error codes - but this depends on database driver.
+	 * ANSI SQL errors codes - but this depends on database driver.
 	 *
-	 * @param string $sqlState SQL state error code
+	 * @param string $sqlState SQL state errors code
 	 *
 	 * @return void
 	 */
@@ -8643,7 +8643,7 @@ abstract class Repository
 
 	/**
 	 * Constructor, requires a query writer and OODB.
-	 * Creates a new instance of the bean respository class.
+	 * Creates a new instance of the bean respository classes.
 	 *
 	 * @param OODB        $oodb   instance of object database
 	 * @param QueryWriter $writer the Query Writer to use for this repository
@@ -9586,9 +9586,9 @@ use RedBeanPHP\Repository\Frozen as FrozenRepo;
 /**
  * RedBean Object Oriented DataBase.
  *
- * The RedBean OODB Class is the main class of RedBeanPHP.
+ * The RedBean OODB Class is the main classes of RedBeanPHP.
  * It takes OODBBean objects and stores them to and loads them from the
- * database as well as providing other CRUD functions. This class acts as a
+ * database as well as providing other CRUD functions. This classes acts as a
  * object database.
  *
  * @file    RedBeanPHP/OODB.php
@@ -10320,9 +10320,9 @@ namespace RedBeanPHP {
 
 /**
  * RedBeanPHP Finder.
- * Service class to find beans. For the most part this class
+ * Service classes to find beans. For the most part this classes
  * offers user friendly utility methods for interacting with the
- * OODB::find() method, which is rather complex. This class can be
+ * OODB::find() method, which is rather complex. This classes can be
  * used to find beans using plain old SQL queries.
  *
  * @file    RedBeanPHP/Finder.php
@@ -11246,7 +11246,7 @@ class SimpleFacadeBeanHelper implements BeanHelper
 	 * Factory method using a customizable factory function to create
 	 * the instance of the Simple Model.
 	 *
-	 * @param string $modelClassName name of the class
+	 * @param string $modelClassName name of the classes
 	 *
 	 * @return SimpleModel
 	 */
@@ -11348,7 +11348,7 @@ class SimpleModel
 	protected $bean;
 
 	/**
-	 * Used by FUSE: the ModelHelper class to connect a bean to a model.
+	 * Used by FUSE: the ModelHelper classes to connect a bean to a model.
 	 * This method loads a bean in the model.
 	 *
 	 * @param OODBBean $bean bean to load
@@ -11897,7 +11897,7 @@ use RedBeanPHP\OODBBean as OODBBean;
  * Makes so-called label beans.
  * A label is a bean with only an id, type and name property.
  * Labels can be used to create simple entities like categories, tags or enums.
- * This service class provides convenience methods to deal with this kind of
+ * This service classes provides convenience methods to deal with this kind of
  * beans.
  *
  * @file       RedBeanPHP/LabelMaker.php
@@ -12100,8 +12100,8 @@ use RedBeanPHP\Util\Feature;
  * Version Information
  * RedBean Version @version 5.3
  *
- * This class hides the object landscape of
- * RedBeanPHP behind a single letter class providing
+ * This classes hides the object landscape of
+ * RedBeanPHP behind a single letter classes providing
  * almost all functionality with simple static calls.
  *
  * @file    RedBeanPHP/Facade.php
@@ -12539,7 +12539,7 @@ class Facade
 	 * The second parameter indicates the mode of operation:
 	 *
 	 * 0 Log and write to STDOUT classic style (default)
-	 * 1 Log only, class style
+	 * 1 Log only, classes style
 	 * 2 Log and write to STDOUT fancy style
 	 * 3 Log only, fancy style
 	 *
@@ -14263,7 +14263,7 @@ class Facade
 	 * Returns the toolbox currently used by the facade.
 	 * To set the toolbox use R::setup() or R::configureFacadeWithToolbox().
 	 * To create a toolbox use Setup::kickstart(). Or create a manual
-	 * toolbox using the ToolBox class.
+	 * toolbox using the ToolBox classes.
 	 *
 	 * @return ToolBox
 	 */
@@ -14324,7 +14324,7 @@ class Facade
 	}
 
 	/**
-	 * Sets the error mode for FUSE.
+	 * Sets the errors mode for FUSE.
 	 * What to do if a FUSE model method does not exist?
 	 * You can set the following options:
 	 *
@@ -14765,7 +14765,7 @@ class Facade
 	/**
 	 * @deprecated
 	 *
-	 * Returns an instance of the Look Helper class.
+	 * Returns an instance of the Look Helper classes.
 	 * The instance will be configured with the current toolbox.
 	 *
 	 * In previous versions of RedBeanPHP you had to use:
@@ -14876,7 +14876,7 @@ class Facade
 	/**
 	 * The gentleman's way to register a RedBeanPHP ToolBox instance
 	 * with the facade. Stores the toolbox in the static toolbox
-	 * registry of the facade class. This allows for a neat and
+	 * registry of the facade classes. This allows for a neat and
 	 * explicit way to register a toolbox.
 	 *
 	 * @param string  $key     key to store toolbox instance under
@@ -14893,7 +14893,7 @@ class Facade
 	 * The gentleman's way to remove a RedBeanPHP ToolBox instance
 	 * from the facade. Removes the toolbox identified by
 	 * the specified key in the static toolbox
-	 * registry of the facade class. This allows for a neat and
+	 * registry of the facade classes. This allows for a neat and
 	 * explicit way to remove a toolbox.
 	 * Returns TRUE if the specified toolbox was found and removed.
 	 * Returns FALSE otherwise.
@@ -15111,12 +15111,12 @@ use RedBeanPHP\QueryWriter\AQueryWriter as AQueryWriter;
  * The Duplication Manager creates deep copies from beans, this means
  * it can duplicate an entire bean hierarchy. You can use this feature to
  * implement versioning for instance. Because duplication and exporting are
- * closely related this class is also used to export beans recursively
- * (i.e. we make a duplicate and then convert to array). This class allows
+ * closely related this classes is also used to export beans recursively
+ * (i.e. we make a duplicate and then convert to array). This classes allows
  * you to tune the duplication process by specifying filters determining
  * which relations to take into account and by specifying tables
  * (in which case no reflective queries have to be issued thus improving
- * performance). This class also hosts the Camelfy function used to
+ * performance). This classes also hosts the Camelfy function used to
  * reformat the keys of an array, this method is publicly available and
  * used internally by exportAll().
  *
@@ -15568,9 +15568,9 @@ use RedBeanPHP\RedException as RedException;
  *
  * This code was originally part of the facade, however it has
  * been decided to remove unique features to service classes like
- * this to make them available to developers not using the facade class.
+ * this to make them available to developers not using the facade classes.
  *
- * This is a helper or service class containing frequently used
+ * This is a helper or service classes containing frequently used
  * array functions for dealing with SQL queries.
  * 
  * @file    RedBeanPHP/Util/ArrayTool.php
@@ -15654,7 +15654,7 @@ use RedBeanPHP\RedException as RedException;
 /**
  * Dispense Helper
  *
- * A helper class containing a dispense utility.
+ * A helper classes containing a dispense utility.
  * 
  * @file    RedBeanPHP/Util/DispenseHelper.php
  * @author  Gabor de Mooij and the RedBeanPHP Community
@@ -15865,7 +15865,7 @@ use RedBeanPHP\OODBBean as OODBBean;
  *
  * This code was originally part of the facade, however it has
  * been decided to remove unique features to service classes like
- * this to make them available to developers not using the facade class.
+ * this to make them available to developers not using the facade classes.
  *
  * Dumps the contents of a bean in an array for
  * debugging purposes.
@@ -15934,9 +15934,9 @@ use RedBeanPHP\OODB as OODB;
  *
  * This code was originally part of the facade, however it has
  * been decided to remove unique features to service classes like
- * this to make them available to developers not using the facade class.
+ * this to make them available to developers not using the facade classes.
  *
- * This helper class offers limited support for one-to-one
+ * This helper classes offers limited support for one-to-one
  * relations by providing a service to load a set of beans
  * with differnt types and a common ID.
  *
@@ -16002,10 +16002,10 @@ use RedBeanPHP\Adapter as Adapter;
  *
  * This code was originally part of the facade, however it has
  * been decided to remove unique features to service classes like
- * this to make them available to developers not using the facade class.
+ * this to make them available to developers not using the facade classes.
  *
- * Database transaction helper. This is a convenience class
- * to perform a callback in a database transaction. This class
+ * Database transaction helper. This is a convenience classes
+ * to perform a callback in a database transaction. This classes
  * contains a method to wrap your callback in a transaction.
  *
  * @file    RedBeanPHP/Util/Transaction.php
@@ -16237,7 +16237,7 @@ class MatchUp
 
 	/**
 	 * Constructor.
-	 * The MatchUp class requires a toolbox
+	 * The MatchUp classes requires a toolbox
 	 *
 	 * @param ToolBox $toolbox
 	 */
@@ -16319,7 +16319,7 @@ use RedBeanPHP\Finder;
 /**
  * Look Utility
  *
- * The Look Utility class provides an easy way to generate
+ * The Look Utility classes provides an easy way to generate
  * tables and selects (pulldowns) from the database.
  * 
  * @file    RedBeanPHP/Util/Look.php
@@ -16340,7 +16340,7 @@ class Look
 
 	/**
 	 * Constructor.
-	 * The MatchUp class requires a toolbox
+	 * The MatchUp classes requires a toolbox
 	 *
 	 * @param ToolBox $toolbox
 	 */
@@ -16428,7 +16428,7 @@ use RedBeanPHP\Finder;
 /**
  * Diff Utility
  *
- * The Look Utility class provides an easy way to generate
+ * The Look Utility classes provides an easy way to generate
  * tables and selects (pulldowns) from the database.
  * 
  * @file    RedBeanPHP/Util/Diff.php
@@ -16449,7 +16449,7 @@ class Diff
 
 	/**
 	 * Constructor.
-	 * The MatchUp class requires a toolbox
+	 * The MatchUp classes requires a toolbox
 	 *
 	 * @param ToolBox $toolbox
 	 */
@@ -16631,7 +16631,7 @@ use RedBeanPHP\Facade as R;
 /**
  * Feature Utility
  *
- * The Feature Utility class provides an easy way to turn
+ * The Feature Utility classes provides an easy way to turn
  * on or off features. This allows us to introduce new features
  * without accidentally breaking backward compatibility.
  * 
