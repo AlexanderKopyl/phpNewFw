@@ -51,6 +51,15 @@ class View{
         $this->view = $view;
     }
 
+    /**
+<<<<<<< HEAD
+     * Рендеринг переменных для layout
+     * @param $vars
+=======
+     * @param $vars
+     *
+>>>>>>> e2cea9e27aba6b9e78ffd5df56cdd8934c6716d5
+     */
     public function render($vars){
 
         if(is_array($vars)){
@@ -103,7 +112,8 @@ class View{
     }
 
     /**
-     *
+     * Функция возвращает мета теги страницы
+     *return html
      */
     public static function getMeta(){
         echo '<title>'. self::$meta['title'] . '</title>
@@ -112,6 +122,7 @@ class View{
     }
 
     /**
+     * Устанавливает мета теги страницы
      * @param string $title
      * @param string $desc
      */

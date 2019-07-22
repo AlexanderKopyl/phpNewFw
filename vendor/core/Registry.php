@@ -9,6 +9,9 @@ class Registry
     use TSinglton;
     public static $objects = [];
 
+    /**
+     * Registry constructor.
+     */
     protected function __construct()
     {
         $config = require ROOT . "/config/config.php";
@@ -19,6 +22,10 @@ class Registry
     }
 
 
+    /**
+     * @param $name
+     * @return mixed
+     */
     public function __get($name)
     {
 
@@ -28,7 +35,11 @@ class Registry
         }
     }
 
-    public function __set($name,$obj)
+    /**
+     * @param $name
+     * @param $obj
+     */
+    public function __set($name, $obj)
     {
         // TODO: Implement __get() method.
         if(!isset(self::$objects[$name])){

@@ -1,6 +1,14 @@
 <div class="container">
     <div id="answer"></div>
-    <?php new vendor\widgets\menu\Menu();?>
+    <?php new vendor\widgets\menu\Menu([
+            'tpl' => WWW . '/menu/select.php',
+            'container' => 'select',
+            'class' => 'select',
+            'table' => 'categories',
+            'cache' => 60,
+            'cacheKey' => 'fw_select',
+
+    ]);?>
     <?php if (!empty($posts)) : ?>
         <?php foreach ($posts as $post) :?>
             <div class="panel panel-default">

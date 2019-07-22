@@ -79,6 +79,7 @@ class Router
      * перенапрявляет по коректному пути
      * @param $url
      * @return mixed
+     * @throws \Exception
      */
     public static function dispatch($url){
         $url = self::removeQueryString($url);
@@ -101,18 +102,14 @@ class Router
                     //Выводим нужный вид и передаем переменный в него
                     $cObj->getView();
                 }else{
-//                    echo "Контроллер <b>$controller::$action</b> не найден";
                     throw new \Exception("Контроллер <b>$controller::$action</b> не найден",404);
                 }
 
             }else{
-//                echo "Контроллер <b>$controller</b> не найден";
                 throw new \Exception("Контроллер <b>$controller</b> не найден",404);
             }
         }else{
             //Если ничего не найдено выводим ошибку 404
-//            http_response_code(404);
-//            return include '404.php';
             throw new \Exception("Страница не найден",404);
         }
     }
