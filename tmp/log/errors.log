@@ -32,3 +32,19 @@
 [2019-07-20 12:24:41] Текст ошибки: require(D:\laragon\www\phpNewFw\public/menu/select.php): failed to open stream: No such file or directory Файл: D:\laragon\www\phpNewFw\vendor\widgets\menu\Menu.php Cтрока: 103 
 >>>>>>> b3defce9326d8751b0b839366053451ff567e64a
 =====================
+[2019-07-22 09:42:36] Текст ошибки: syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION) Файл: W:\domains\phpNewFw\vendor\core\base\Controller.php Cтрока: 41 
+=====================
+[2019-07-22 12:42:33] Текст ошибки: Контроллер <b>app\controllers\admin\TestController</b> не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 114 
+=====================
+[2019-07-22 12:49:52] Текст ошибки: Контроллер <b>app\controllers\admin\TestController::viewAction</b> не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 110 
+=====================
+[2019-07-22 13:04:11] Текст ошибки: Контроллер <b>app\controllers\admin\TestsController</b> не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 114 
+=====================
+[2019-07-22 13:06:41] Текст ошибки: Контроллер <b>app\controllers\admin\TestsController</b> не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 114 
+=====================
+[2019-07-22 13:06:45] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 118 
+=====================
+[2019-07-22 13:07:07] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 118 
+=====================
+[2019-07-22 13:12:52] Текст ошибки: Array to string conversion Файл: W:\domains\phpNewFw\app\views\layouts\admin.php Cтрока: 28 
+=====================

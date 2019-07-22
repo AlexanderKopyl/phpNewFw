@@ -63,7 +63,12 @@ class Router
                 if (!isset($route['action'])){
                     $route['action'] = 'index';
                 }
-//                debug($route);
+//                prefix for admin controller
+                if(!isset($route['prefix'])){
+                    $route['prefix'] = '';
+                }else{
+                    $route['prefix'] .= '\\';
+                }
 
                 $route['controller'] = self::upperCamelCase($route['controller']);
                 self::$route = $route;
@@ -87,7 +92,7 @@ class Router
         if (self::matchRoute($url)){
             //Подключаем контроллер
             //Подключение происходит по namespace
-            $controller = 'app\controllers\\'. self::$route['controller'] . 'Controller';
+            $controller = 'app\controllers\\'. self::$route['prefix'] . self::$route['controller'] . 'Controller';
 
             //Проверяем еслить ли такой класс по namespace
             if (class_exists($controller)){
