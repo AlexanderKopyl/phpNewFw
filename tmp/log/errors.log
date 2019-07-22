@@ -24,3 +24,7 @@
 =====================
 [2019-07-19 17:29:46] Текст ошибки: Call to undefined function vendor\widgets\menu\Menu() Файл: W:\domains\phpNewFw\app\views\Main\index.php Cтрока: 3 
 =====================
+[2019-07-22 09:40:13] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 116 
+=====================
+[2019-07-22 09:40:13] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\core\Router.php Cтрока: 116 
+=====================
