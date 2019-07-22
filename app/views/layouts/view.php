@@ -19,9 +19,12 @@
 <div class="container">
     <?php if (!empty($menu)) : ?>
         <ul class="nav nav-pills">
-            <?php foreach ($menu as $v) :?>
-                <li role="presentation" ><a href="#"><?= $v['title']?></a></li>
-            <?php endforeach;?>
+            <li><a href="/">Home</a></li>
+            <li><a href="page/about">About</a></li>
+            <li><a href="admin">About</a></li>
+            <!--            --><?php //foreach ($menu as $v) :?>
+            <!--                <li role="presentation" ><a href="#">--><?//= $v['title']?><!--</a></li>-->
+            <!--            --><?php //endforeach;?>
         </ul>
     <?php endif;?>
 

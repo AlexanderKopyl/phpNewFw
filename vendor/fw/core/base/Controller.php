@@ -1,9 +1,9 @@
 <?php
 
 
-namespace vendor\core\base;
+namespace fw\core\base;
 
-use vendor\core\Registry;
+use fw\core\Registry;
 
 abstract class Controller
 {

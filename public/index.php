@@ -1,13 +1,14 @@
 <?php
 
-use vendor\core\Router;
+use fw\core\Router;
 
-require '../vendor/libs/functions.php';
+require '../vendor/fw/libs/functions.php';
+require '../vendor/autoload.php';
 
 define("DEBUG",1);
 define("WWW", __DIR__);
-define("CORE", dirname(__DIR__) . '/vendor/core');
-define("LIBS", dirname(__DIR__) . '/vendor/libs');
+define("CORE", dirname(__DIR__) . '/vendor/fw/core');
+define("LIBS", dirname(__DIR__) . '/vendor/fw/libs');
 define("ROOT",dirname(__DIR__));
 define("APP",dirname(__DIR__) . "/app");
 define("CACHE",dirname(__DIR__) . "/tmp/cache");
@@ -17,13 +18,13 @@ define("LAYOUT",'default');
 /**
  * spl_autoload_register — Регистрирует заданную функцию в качестве реализации метода __autoload()
  */
-spl_autoload_register(function ($class){
-    $file = ROOT . '/' . str_replace('\\','/', $class) . '.php';
-    if (is_file($file)){
-        require_once $file;
-    }
-});
-new \vendor\core\App;
+//spl_autoload_register(function ($class){
+//    $file = ROOT . '/' . str_replace('\\','/', $class) . '.php';
+//    if (is_file($file)){
+//        require_once $file;
+//    }
+//});
+new fw\core\App;
 /**
  * Переменная текущего запроса..
  */

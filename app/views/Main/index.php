@@ -1,6 +1,6 @@
 <div class="container">
     <div id="answer"></div>
-    <?php new vendor\widgets\menu\Menu([
+    <?php new fw\widgets\menu\Menu([
             'tpl' => WWW . '/menu/select.php',
             'container' => 'select',
             'class' => 'select',

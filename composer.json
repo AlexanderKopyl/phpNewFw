@@ -7,5 +7,11 @@
             "name": "Alexsander",
             "email": "alexsander11115@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "fw\\": "vendor/fw",
+            "app\\": "app"
+        }
+    }
 }
