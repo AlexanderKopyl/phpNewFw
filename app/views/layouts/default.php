@@ -8,27 +8,28 @@
 
     <!-- Bootstrap -->
     <link href="css/main.css" rel="stylesheet">
-
+    <!-- Bootstrap -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
-<?php if (!empty($menu)) : ?>
+<div class="container">
+
     <ul class="nav nav-pills">
         <li><a href="/">Home</a></li>
         <li><a href="page/about">About</a></li>
-        <li><a href="admin">About</a></li>
-        <!--            --><?php //foreach ($menu as $v) :?>
-        <!--                <li role="presentation" ><a href="#">--><?//= $v['title']?><!--</a></li>-->
-        <!--            --><?php //endforeach;?>
+        <li><a href="/admin">Admin</a></li>
+        <li><a href="/user/signup">Регистрация</a></li>
+        <li><a href="/user/login">Вход</a></li>
+        <li><a href="/user/logout">Выход</a></li>
     </ul>
-<?php endif;?>
 
-<h1>Hello, world!</h1>
 
-<?= $content ?>
+    <h1>Main, teamplate</h1>
+    <?= $content ?>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>

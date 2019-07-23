@@ -21,9 +21,9 @@
             <li><a href="/">Home</a></li>
             <li><a href="page/about">About</a></li>
             <li><a href="/admin">Admin</a></li>
-<!--            --><?php //foreach ($menu as $v) :?>
-<!--                <li role="presentation" ><a href="#">--><?//= $v['title']?><!--</a></li>-->
-<!--            --><?php //endforeach;?>
+            <li><a href="/user/signup">Регистрация</a></li>
+            <li><a href="/user/login">Вход</a></li>
+            <li><a href="/user/logout">Выход</a></li>
         </ul>
     <?php endif;?>
 
