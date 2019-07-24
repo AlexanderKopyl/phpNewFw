@@ -16,7 +16,6 @@
 </head>
 <body>
 <div class="container">
-    <?php if (!empty($menu)) : ?>
         <ul class="nav nav-pills">
             <li><a href="/">Home</a></li>
             <li><a href="page/about">About</a></li>
@@ -25,7 +24,17 @@
             <li><a href="/user/login">Вход</a></li>
             <li><a href="/user/logout">Выход</a></li>
         </ul>
-    <?php endif;?>
+    <?php if(isset($_SESSION['error'])):?>
+        <div class="alert alert-danger">
+            <?php echo $_SESSION['error']; unset($_SESSION['error'])?>
+        </div>
+    <?php endif; ?>
+
+    <?php if(isset($_SESSION['success'])):?>
+        <div class="alert alert-success">
+            <?php echo $_SESSION['success']; unset($_SESSION['success'])?>
+        </div>
+    <?php endif; ?>
 
     <h1>Main, teamplate</h1>
 

@@ -76,3 +76,73 @@
 =====================
 [2019-07-23 17:12:55] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
 =====================
+[2019-07-24 10:03:22] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 10:03:22] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 10:03:25] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 10:04:39] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 10:04:50] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 11:19:31] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 11:20:05] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 11:20:09] Текст ошибки: Undefined variable: _SESSION Файл: W:\domains\phpNewFw\app\views\layouts\main.php Cтрока: 27 
+=====================
+[2019-07-24 13:30:48] Текст ошибки: Undefined index: success Файл: W:\domains\phpNewFw\app\views\layouts\main.php Cтрока: 36 
+=====================
+[2019-07-24 13:31:21] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 13:31:42] Текст ошибки: Call to undefined method app\controllers\UserController::redirect() Файл: W:\domains\phpNewFw\app\controllers\UserController.php Cтрока: 20 
+=====================
+[2019-07-24 13:33:21] Текст ошибки: Call to undefined method app\models\User::redirect() Файл: W:\domains\phpNewFw\app\controllers\UserController.php Cтрока: 20 
+=====================
+[2019-07-24 13:33:24] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 13:33:26] Текст ошибки: Call to undefined method app\models\User::redirect() Файл: W:\domains\phpNewFw\app\controllers\UserController.php Cтрока: 20 
+=====================
+[2019-07-24 13:34:26] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 13:34:28] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:27:28] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:27:32] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:28:32] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:28:50] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:32:43] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:32:46] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:33:12] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:33:14] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:33:23] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:33:25] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:34:22] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:34:44] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:35:10] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:35:14] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:45:02] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 14:45:13] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 15:06:51] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 15:07:04] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-24 15:07:30] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
