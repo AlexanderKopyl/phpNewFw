@@ -7,7 +7,6 @@ class UserController extends AppController
 {
 
     public function indexAction(){
-        debug($this->route);
         View::setMeta('Admin panel :: Главная','Description Admin panel');
         $test = "Test var";
         $data = ['test',2];

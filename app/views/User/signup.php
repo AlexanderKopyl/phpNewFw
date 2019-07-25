@@ -20,6 +20,6 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        <?php if($_SESSION['form_data']) unset($_SESSION['form_data'])?>
+        <?php if(isset($_SESSION['form_data'])) unset($_SESSION['form_data'])?>
     </div>
 </div>
