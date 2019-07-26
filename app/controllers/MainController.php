@@ -10,7 +10,7 @@ use fw\libs\Pagination;
 
 class MainController extends AppController
 {
-    public $layout = 'main';
+//    public $layout = 'main';
 
 
     public function indexAction()
@@ -25,9 +25,9 @@ class MainController extends AppController
         $pagination = new Pagination($page,$perpage,$total);
         $start = $pagination->getStart();
         $posts = \R::findAll('posts',"LIMIT $start, $perpage");
-        $menu = $this->menu;
-        View::setMeta('View page','Desc page');
-        $data = compact('menu','posts','pagination','total');
+
+        View::setMeta('Blog :: Главная страница','Desc page');
+        $data = compact('posts','pagination','total');
 
         $this->set($data);
     }

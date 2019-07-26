@@ -118,7 +118,14 @@ class View{
         return preg_replace($serch,$replace,$buffer);
     }
 
-
+    public function getPart($file){
+        $file = APP . "/views/{$file}.php";
+        if(is_file($file)){
+            require_once $file;
+        }else{
+            echo "File {$file} not found..";
+        }
+    }
     /**
      * Вырезает скрипты с view
      * @param $content
