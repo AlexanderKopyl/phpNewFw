@@ -210,3 +210,11 @@
 =====================
 [2019-07-26 12:40:04] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
 =====================
+[2019-07-26 16:48:07] Текст ошибки: Undefined variable: perpage Файл: W:\domains\phpNewFw\vendor\fw\libs\Pagination.php Cтрока: 22 
+=====================
+[2019-07-26 16:52:11] Текст ошибки: Call to undefined function fw\libs\exlode() Файл: W:\domains\phpNewFw\vendor\fw\libs\Pagination.php Cтрока: 53 
+=====================
+[2019-07-26 16:53:40] Текст ошибки: Call to undefined function fw\libs\exlode() Файл: W:\domains\phpNewFw\vendor\fw\libs\Pagination.php Cтрока: 53 
+=====================
+[2019-07-26 16:55:39] Текст ошибки: Call to undefined function fw\libs\exlode() Файл: W:\domains\phpNewFw\vendor\fw\libs\Pagination.php Cтрока: 53 
+=====================
