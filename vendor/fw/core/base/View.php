@@ -30,9 +30,7 @@ class View{
      */
     public $scripts = [];
 
-    /**
-     *
-     */
+
     public static $meta = ['title' => '', 'desc' => ''];
     /**
      * View constructor.
@@ -52,13 +50,10 @@ class View{
     }
 
     /**
-<<<<<<< HEAD
      * Рендеринг переменных для layout
      * @param $vars
-=======
      * @param $vars
      *
->>>>>>> e2cea9e27aba6b9e78ffd5df56cdd8934c6716d5
      */
     public function render($vars){
         $this->route['prefix'] = str_replace('\\','/',$this->route['prefix']);
@@ -69,15 +64,20 @@ class View{
 
         $file_view = APP . "/views/{$this->route['prefix']}{$this->route['controller']}/{$this->view}.php";
 
-        ob_start();
-        if(is_file($file_view)){
-            require  $file_view;
-        }else{
-//            echo "<p>Не найден вид <b>$file_view</b></p>";
-            throw new \Exception("<p>Не найден вид <b>$file_view</b></p>",404);
-        }
+//        ob_start([$this,'compressPage']);
+        ob_start('ob_gzhandler');
+        {
+            header("Content-Encoding: gzip");
+            if(is_file($file_view)){
+                require  $file_view;
+            }else{
+                throw new \Exception("<p>Не найден вид <b>$file_view</b></p>",404);
+            }
 
-        $content = ob_get_clean();
+            $content = ob_get_contents();
+        }
+//        $content = ob_get_clean();
+        ob_clean();
 
         if (false !== $this->layout){
             $file_layout = APP . "/views/layouts/{$this->layout}.php";
@@ -91,13 +91,33 @@ class View{
 
                 require $file_layout;
             }else{
-//                echo "Файл <b>$file_layout</b> не найден";
                 throw new \Exception("Файл <b>$file_layout</b> не найден",404);
             }
         }
 
 
     }
+    protected function compressPage($buffer){
+        $serch = [
+            "/(\n)+/",
+            "/\r\n+/",
+            "/\n(\t)+/",
+            "/\n(\ )+/",
+            "/\>(\n)+</",
+            "/\>\r\n</",
+        ];
+        $replace = [
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "><",
+            "><",
+        ];
+
+        return preg_replace($serch,$replace,$buffer);
+    }
+
 
     /**
      * Вырезает скрипты с view

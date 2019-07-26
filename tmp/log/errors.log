@@ -180,3 +180,33 @@
 =====================
 [2019-07-25 17:35:55] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
 =====================
+[2019-07-26 10:26:41] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-26 10:26:42] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-26 11:07:52] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-26 11:10:19] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-26 11:18:39] Текст ошибки: print_r(): Cannot use output buffering in output buffering display handlers Файл: W:\domains\phpNewFw\vendor\fw\libs\functions.php Cтрока: 4 
+=====================
+[2019-07-26 11:18:39] Текст ошибки: ob_end_clean(): failed to delete buffer. No buffer to delete Файл: W:\domains\phpNewFw\vendor\fw\core\ErrorHandler.php Cтрока: 43 
+=====================
+[2019-07-26 11:21:37] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-26 11:26:36] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-26 11:59:46] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-26 12:12:47] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-26 12:13:48] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-26 12:13:49] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-26 12:13:50] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-26 12:16:18] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-26 12:40:04] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
