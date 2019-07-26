@@ -1,12 +1,12 @@
 <div class="recent">
-    <?php new fw\widgets\menu\Menu([
-        'tpl' => WWW . '/menu/select.php',
-        'container' => 'select',
-        'class' => 'select',
-        'table' => 'categories',
-        'cache' => 60,
-        'cacheKey' => 'fw_select',
-    ]);?>
+<!--    --><?php //new fw\widgets\menu\Menu([
+//        'tpl' => WWW . '/menu/select.php',
+//        'container' => 'select',
+//        'class' => 'select',
+//        'table' => 'categories',
+//        'cache' => 60,
+//        'cacheKey' => 'fw_select',
+//    ]);?>
     <h3>RECENT POSTS</h3>
     <ul>
         <li><a href="#">Aliquam tincidunt mauris</a></li>
