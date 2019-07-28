@@ -7,6 +7,8 @@
 //        'cache' => 60,
 //        'cacheKey' => 'fw_select',
 //    ]);?>
+<?php new fw\widgets\language\language();?>
+    <br><br>
     <h3>RECENT POSTS</h3>
     <ul>
         <li><a href="#">Aliquam tincidunt mauris</a></li>

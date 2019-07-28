@@ -5,7 +5,9 @@ namespace app\controllers;
 
 
 
+use fw\core\App;
 use fw\core\base\Controller;
+use fw\widgets\language\language;
 
 class AppController extends Controller
 {
@@ -17,7 +19,8 @@ class AppController extends Controller
     {
         parent::__construct($route);
         new \app\models\Main;
-        $this->menu = \R::findAll('categories');
+        App::$app->setProperties('langs', Language::getLanguages());
+        App::$app->setProperties('lang', Language::getLanguage(App::$app->getProperty('langs')));
     }
 
     protected function setMeta($title ='',$desc = ''){
