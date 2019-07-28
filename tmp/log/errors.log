@@ -246,3 +246,15 @@
 =====================
 [2019-07-26 17:59:47] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
 =====================
+[2019-07-28 09:49:12] Текст ошибки: Uncaught TypeError: Argument 1 passed to vendor\core\ErrorHandler::exceptionHandler() must be an instance of Exception, instance of ParseError given in D:\laragon\www\phpNewFw\vendor\core\ErrorHandler.php:75
+Stack trace:
+#0 [internal function]: vendor\core\ErrorHandler->exceptionHandler(Object(ParseError))
+#1 {main}
+  thrown Файл: D:\laragon\www\phpNewFw\vendor\core\ErrorHandler.php Cтрока: 75 
+=====================
+[2019-07-28 09:50:04] Текст ошибки: Uncaught TypeError: Argument 1 passed to vendor\core\ErrorHandler::exceptionHandler() must be an instance of Exception, instance of ParseError given in D:\laragon\www\phpNewFw\vendor\core\ErrorHandler.php:75
+Stack trace:
+#0 [internal function]: vendor\core\ErrorHandler->exceptionHandler(Object(ParseError))
+#1 {main}
+  thrown Файл: D:\laragon\www\phpNewFw\vendor\core\ErrorHandler.php Cтрока: 75 
+=====================
