@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `languages` (
   `title` varchar(50) DEFAULT NULL,
   `base` int(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COMMENT='Table with language';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COMMENT='Table with langs';
 
 -- Дамп данных таблицы fw.languages: ~2 rows (приблизительно)
 /*!40000 ALTER TABLE `languages` DISABLE KEYS */;

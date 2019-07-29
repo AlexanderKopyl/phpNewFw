@@ -258,3 +258,21 @@ Stack trace:
 #1 {main}
   thrown Файл: D:\laragon\www\phpNewFw\vendor\core\ErrorHandler.php Cтрока: 75 
 =====================
+[2019-07-29 12:06:15] Текст ошибки: Undefined index:  Файл: W:\domains\phpNewFw\vendor\fw\widgets\language\language.php Cтрока: 38 
+=====================
+[2019-07-29 12:06:15] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-29 12:06:15] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-29 12:27:06] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-29 12:28:20] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-29 12:32:16] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-29 12:32:18] Текст ошибки: <p>Не найден вид <b>W:\domains\phpNewFw/app/views/Language/change.php</b></p> Файл: W:\domains\phpNewFw\vendor\fw\core\base\View.php Cтрока: 74 
+=====================
+[2019-07-29 12:44:35] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-29 12:44:38] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
