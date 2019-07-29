@@ -4,6 +4,8 @@
 namespace fw\core\base;
 
 
+use fw\core\App;
+
 class View{
 
     /**
@@ -56,6 +58,7 @@ class View{
      *
      */
     public function render($vars){
+        Language::load(App::$app->getProperty('lang'),$this->route);
         $this->route['prefix'] = str_replace('\\','/',$this->route['prefix']);
 
         if(is_array($vars)){

@@ -9,7 +9,7 @@
 //    ]);?>
 <?php new fw\widgets\language\language();?>
     <br><br>
-    <h3>RECENT POSTS</h3>
+    <h3><?php  __('recent_posts')?></h3>
     <ul>
         <li><a href="#">Aliquam tincidunt mauris</a></li>
         <li><a href="#">Vestibulum auctor dapibus lipsum</a></li>
@@ -36,7 +36,7 @@
     </ul>
 </div>
 <div class="categories">
-    <h3>CATEGORIES</h3>
+    <h3><?php __('categories')?></h3>
     <ul>
         <li><a href="#">Vivamus vestibulum nulla</a></li>
         <li><a href="#">Integer vitae libero ac risus e</a></li>

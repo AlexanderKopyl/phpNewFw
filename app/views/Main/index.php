@@ -5,7 +5,7 @@
             <div class="post-info">
                 <h4><a href="<?= $post->id; ?>"><?= $post->name ?></a> July 30, 2014 / 27 Comments</h4>
                 <p><?= $post->description ?></p>
-                <a href="<?= $post->id; ?>"><span></span>READ MORE</a>
+                <a href="<?= $post->id; ?>"><span></span><?php __('read_more')?></a>
             </div>
         </div>
     <?php endforeach; ?>
