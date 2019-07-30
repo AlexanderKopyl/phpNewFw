@@ -1,1 +1,4 @@
 .idea
+
+public/adminlte/*.lock
+public/adminlte/*.json
