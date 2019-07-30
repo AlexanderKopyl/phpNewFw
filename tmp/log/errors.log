@@ -286,3 +286,7 @@ Stack trace:
 =====================
 [2019-07-29 13:22:47] Текст ошибки: Контроллер <b>app\controllers\LanguageController</b> не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 114 
 =====================
+[2019-07-30 11:26:49] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
+[2019-07-30 11:26:50] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
+=====================
