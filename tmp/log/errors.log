@@ -290,3 +290,9 @@ Stack trace:
 =====================
 [2019-07-30 11:26:50] Текст ошибки: Страница не найден Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 118 
 =====================
+[2019-07-30 12:34:36] Текст ошибки: Call to undefined method app\controllers\admin\MainController::getView() Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 108 
+=====================
+[2019-07-30 12:34:40] Текст ошибки: Call to undefined method app\controllers\admin\MainController::getView() Файл: W:\domains\phpNewFw\vendor\fw\core\Router.php Cтрока: 108 
+=====================
+[2019-07-30 13:50:21] Текст ошибки: Cannot use [] for reading Файл: W:\domains\phpNewFw\app\controllers\admin\AppController.php Cтрока: 18 
+=====================

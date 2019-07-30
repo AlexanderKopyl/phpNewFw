@@ -16,8 +16,8 @@ class UserController extends AppController
 
     }
 
-    public function testAction(){
-        echo __METHOD__;
+    public function loginAction(){
+        $this->layout = 'login';
     }
 
 }

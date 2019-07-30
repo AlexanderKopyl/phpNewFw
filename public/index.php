@@ -14,6 +14,7 @@ define("APP",dirname(__DIR__) . "/app");
 define("CACHE",dirname(__DIR__) . "/tmp/cache");
 define("LOG",dirname(__DIR__) . "/tmp/log");
 define("LAYOUT",'blog');
+define("ADMIN",'http://phpnewfw/admin');
 
 /**
  * spl_autoload_register — Регистрирует заданную функцию в качестве реализации метода __autoload()
@@ -35,7 +36,7 @@ Router::add('^page/(?P<action>[a-z-]+)/(?P<alias>[a-z-]+)$',['controller'=> 'Pag
 Router::add('^page/(?P<alias>[a-z-]+)$',['controller'=> 'Page','action' => 'view']);
 
 //defaults route
-Router::add('^admin$',['controller'=> 'User','action' => 'index','prefix' => 'admin']);
+Router::add('^admin$',['controller'=> 'Main','action' => 'index','prefix' => 'admin']);
 Router::add('^admin/?(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$',['prefix' => 'admin']);
 
 Router::add('^$',['controller'=> 'Main','action' => 'index']);
